@@ -1,7 +1,7 @@
 import 'regenerator-runtime/runtime';
 import 'yaku/lib/global';
 import Vue from 'vue';
-import VueDiagramEditor from '../src';
+import Flowx from '../src';
 
 import Codemirror from 'codemirror/lib/codemirror';
 import 'codemirror/mode/javascript/javascript';
@@ -11,7 +11,7 @@ import 'codemirror/mode/htmlmixed/htmlmixed';
 import './styles/docs.scss';
 
 Vue.config.productionTip = false;
-Vue.component('DiagramEditor', VueDiagramEditor);
+Vue.component('Flowx', Flowx);
 
 function loadComponents() {
   const loadContext = context => {

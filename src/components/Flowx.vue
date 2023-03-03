@@ -1,7 +1,7 @@
 <template>
   <div class="flowx-editor__wrapper">
     <FlowxRoot
-      ref="diagram"
+      ref="flowx"
       :bg-pattern="bgPattern"
       :width="width"
       :height="height"
@@ -124,71 +124,71 @@ export default {
     }, 100),
 
     setModel(model) {
-      this.$refs.diagram.setModel(model);
+      this.$refs.flowx.setModel(model);
     },
 
     serialize() {
-      return this.$refs.diagram.serialize();
+      return this.$refs.flowx.serialize();
     },
 
     addNode(node) {
-      this.$refs.diagram.addNode(node);
+      this.$refs.flowx.addNode(node);
     },
 
     addLink(link) {
-      this.$refs.diagram.addLink(link);
+      this.$refs.flowx.addLink(link);
     },
 
     updateNode({ id, name, value }) {
-      this.$refs.diagram.updateNode({ id, name, value });
+      this.$refs.flowx.updateNode({ id, name, value });
     },
 
     deleteNode(id) {
-      this.$refs.diagram.deleteNode(id);
+      this.$refs.flowx.deleteNode(id);
     },
 
     deleteLink(id) {
-      this.$refs.diagram.deleteLink(id);
+      this.$refs.flowx.deleteLink(id);
     },
 
     enableDblClickZoom() {
-      return this.$refs.diagram.enableDblClickZoom();
+      return this.$refs.flowx.enableDblClickZoom();
     },
     disableDblClickZoom() {
-      return this.$refs.diagram.disableDblClickZoom();
+      return this.$refs.flowx.disableDblClickZoom();
     },
     isDblClickZoomEnabled() {
-      return this.$refs.diagram.isDblClickZoomEnabled();
+      return this.$refs.flowx.isDblClickZoomEnabled();
     },
     enableMouseWheelZoom() {
-      return this.$refs.diagram.enableMouseWheelZoom();
+      return this.$refs.flowx.enableMouseWheelZoom();
     },
     disableMouseWheelZoom() {
-      return this.$refs.diagram.disableMouseWheelZoom();
+      return this.$refs.flowx.disableMouseWheelZoom();
     },
     isMouseWheelZoomEnabled() {
-      return this.$refs.diagram.isMouseWheelZoomEnabled();
+      return this.$refs.flowx.isMouseWheelZoomEnabled();
     },
     resetZoom() {
-      return this.$refs.diagram.resetZoom();
+      return this.$refs.flowx.resetZoom();
     },
     updateBBox() {
-      return this.$refs.diagram.updateBBox();
+      return this.$refs.flowx.updateBBox();
     },
     fit() {
-      return this.$refs.diagram.fit();
+      return this.$refs.flowx.fit();
     },
     contain() {
-      return this.$refs.diagram.contain();
+      return this.$refs.flowx.contain();
     },
     center() {
-      return this.$refs.diagram.center();
+      return this.$refs.flowx.center();
     },
     zoomIn() {
-      return this.$refs.diagram.zoomIn();
+      return this.$refs.flowx.zoomIn();
     },
     zoomOut() {
-      return this.$refs.diagram.zoomOut();
+      return this.$refs.flowx.zoomOut();
     },
   },
 };

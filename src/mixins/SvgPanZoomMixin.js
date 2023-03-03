@@ -5,7 +5,7 @@ export default () => ({
         spz: null
     }),
     mounted() {
-        this.spz = svgPanZoom(this.$refs.diagramRoot, {
+        this.spz = svgPanZoom(this.$refs.flowxRoot, {
             viewportSelector: this.$refs.viewPort,
             center: false,
             preventMouseEventsDefault: this.preventMouseEventsDefault,

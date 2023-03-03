@@ -2,8 +2,8 @@
   <div id="app">
     <div class="container">
       <section id="main">
-        <FlowxEditor ref="editor1"/>
-        <FlowxEditor ref="editor2"/>
+        <Flowx ref="editor1"/>
+        <Flowx ref="editor2"/>
       </section>
     </div>
   </div>

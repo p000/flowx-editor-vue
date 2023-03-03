@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="app">
-    <flowx-editor ref="diagram"></flowx-editor>
+    <flowx-editor ref="flowx"></flowx-editor>
   </div>
   <script>
     // register the component
@@ -60,7 +60,7 @@
       },
       methods: {
         init() {
-          this.$refs.diagram.setModel({
+          this.$refs.flowx.setModel({
             nodes: this.nodes,
             links: this.links
           });

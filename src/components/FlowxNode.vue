@@ -2,7 +2,7 @@
   <g :id="node.id">
     <rect
       v-if="pulsable(node)"
-      class="diagram--editor__pulse"
+      class="flowx-editor__pulse"
       :fill="pulseColor(node)"
       :stroke="pulseColor(node)"
       :x="node.x"
@@ -119,7 +119,7 @@ import FlowxNodeTitle from "./FlowxNodeTitle";
 import isEqual from "lodash/isEqual";
 
 export default {
-  name: "DiagramNode",
+  name: "FlowxNode",
 
   components: {
     FlowxNodeTitle,

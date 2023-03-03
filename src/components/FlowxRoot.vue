@@ -2,7 +2,6 @@
   <svg
     :id="`flowx-root-${uniqId}`"
     ref="flowxRoot"
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     :viewBox.camel="'0 0 ' + width / 1.2 + ' ' + height / 1.2"
     :width="width"

@@ -1,7 +1,7 @@
 <template>
   <div>
     <FlowxEditor
-      ref="diagram"
+      ref="flowx"
       :node-color="nodeColor"
       :node-pulsable="nodePulsable"
     >
@@ -9,16 +9,16 @@
     </FlowxEditor>
 
     <div class="d-flex">
-      <button class="btn btn-secondary m-1" @click="$refs.diagram.resetZoom()">
+      <button class="btn btn-secondary m-1" @click="$refs.flowx.resetZoom()">
         resetZoom
       </button>
-      <button class="btn btn-secondary m-1" @click="$refs.diagram.fit()">
+      <button class="btn btn-secondary m-1" @click="$refs.flowx.fit()">
         fit
       </button>
-      <button class="btn btn-secondary m-1" @click="$refs.diagram.contain()">
+      <button class="btn btn-secondary m-1" @click="$refs.flowx.contain()">
         contain
       </button>
-      <button class="btn btn-secondary m-1" @click="$refs.diagram.center()">
+      <button class="btn btn-secondary m-1" @click="$refs.flowx.center()">
         center
       </button>
     </div>
@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     init() {
-      this.$refs.diagram.setModel({
+      this.$refs.flowx.setModel({
         nodes: this.nodes,
         links: this.links,
       });

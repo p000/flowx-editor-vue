@@ -1,6 +1,6 @@
 <template>
   <VueDiagramEditor
-    ref="diagram"
+    ref="flowx"
     :node-color="nodeColor"
     :node-pulsable="nodePulsable"
   >
@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     init() {
-      this.$refs.diagram.setModel({
+      this.$refs.flowx.setModel({
         nodes: this.nodes,
         links: this.links
       });
