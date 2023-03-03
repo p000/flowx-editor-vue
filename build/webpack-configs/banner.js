@@ -1,9 +1,9 @@
 const {version, homepage} = require('../../package');
 const year = new Date().getFullYear();
-const years = year === 2021 ? '2021' : '2021-' + year;
+const years = year === 2023 ? '2023' : '2023-' + year;
 
 module.exports = `
-flowx-editor-vue v${version} | (c) ${years} Maksim Kutishchev
+flowx-editor-vue v${version} | (c) ${years} p000ic
 Released under the Apache 2 License.
 ${homepage}
 `.trim();
