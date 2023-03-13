@@ -118,19 +118,19 @@
 </template>
 
 <script>
-import FlowxNode from "./FlowxNode";
-import FlowxLink from "./FlowxLink";
 import FlowxEditorMixin from "../mixins/FlowxEditorMixin";
 import SvgPanZoomMixin from "../mixins/SvgPanZoomMixin";
 import { getAbsoluteXY } from "../helpers";
 import { ulid } from "ulid";
 
+const components = {
+  FlowxNode: () => import("../components/FlowxNode.vue"),
+  FlowxLink: () => import("../components/FlowxLink.vue")
+};
+
 export default {
   name: "FlowxRoot",
-  components: {
-    FlowxNode,
-    FlowxLink,
-  },
+  components,
   mixins: [FlowxEditorMixin(), SvgPanZoomMixin()],
   props: {
     bgPattern: { type: Number, default: 0 },

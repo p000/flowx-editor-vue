@@ -33,16 +33,15 @@
   </div>
 </template>
 <script>
-import FlowxRoot from "./FlowxRoot";
 import throttle from "lodash/throttle";
+
+const components = {
+  FlowxRoot: () => import("../components/FlowxRoot.vue")
+};
 
 export default {
   name: "Flowx",
-
-  components: {
-    FlowxRoot,
-  },
-
+  components,
   props: {
     bgPattern:{
       type: Number,

@@ -114,18 +114,16 @@
 </template>
 <script>
 import Node from "../models/Node";
-import FlowxPort from "./FlowxPort";
-import FlowxNodeTitle from "./FlowxNodeTitle";
 import isEqual from "lodash/isEqual";
+
+const components = {
+  FlowxPort: () => import("../components/FlowxPort.vue"),
+  FlowxNodeTitle: () => import("../components/FlowxNodeTitle.vue")
+};
 
 export default {
   name: "FlowxNode",
-
-  components: {
-    FlowxNodeTitle,
-    FlowxPort,
-  },
-
+  components,
   props: {
     node: { type: Node, required: true },
     color: { type: Function, required: true },

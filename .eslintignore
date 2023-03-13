@@ -1,4 +1,5 @@
 dist
 static
-test/unit/coverage
+sample
+node_modules
 docs/files
