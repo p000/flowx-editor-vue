@@ -68,6 +68,7 @@
 .flowx-editor__animated1 {
   stroke-dasharray: 10;
   stroke-dashoffset: 1000;
+  background-color: rgb(210, 39, 122);
   animation: flowx-editor-rl--link-pulse 50s linear infinite;
 }
 
@@ -82,4 +83,16 @@
   from {
     stroke-dashoffset: 0;
   }
+}
+
+.flowx-editor__link1 {
+  margin: 5px;
+  background-color: rgb(137, 112, 29);
+  stroke: rgb(255, 255, 255);
+}
+
+.flowx-editor__link0 {
+  margin: 5px;
+  background-color: rgb(233, 212, 112);
+  stroke: rgb(0, 0, 0);
 }

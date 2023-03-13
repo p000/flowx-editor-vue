@@ -1,7 +1,7 @@
 <template>
   <g :id="node.id">
     <rect
-      v-if="pulsable(node)"
+      v-if="isPulse(node)"
       class="flowx-editor__pulse"
       :fill="pulseColor(node)"
       :stroke="pulseColor(node)"
@@ -94,7 +94,7 @@
         :disabled="portsOutDisabled[port]"
         :available="portsOutAvailable[port]"
         :hovered="isHoveredPort('out', port)"
-        align="end"
+        :align="'end'"
         :color="invertColor(node.style.backgroundColor, true)"
         @mousedown="mouseDownPort('out', port, $event)"
         @mouseenter="mouseEnterPort('out', port, $event)"
@@ -130,7 +130,7 @@ export default {
     node: { type: Node, required: true },
     color: { type: Function, required: true },
     pulseColor: { type: Function, required: true },
-    pulsable: { type: Function, required: true },
+    isPulse: { type: Function, required: true },
     portDisabled: { type: Function, required: true },
     portAvailable: { type: Function, required: true },
     deletable: { type: Function, required: true },
@@ -197,7 +197,6 @@ export default {
       return this.node.size.width - 4;
     },
     slotHeight() {
-      // отступ - заготовок - отступ
       return this.node.size.height - 22;
     },
     nodeDeletable() {

@@ -86,7 +86,7 @@
         :node="node"
         :color="nodeColor"
         :pulse-color="nodePulseColor"
-        :pulsable="nodePulsable"
+        :isPulse="nodeIsPulse"
         :deletable="nodeDeletable"
         :dragging="draggedNode === node.id"
         :selected="selectedNode === node.id"
@@ -140,7 +140,7 @@ export default {
     zoomEnabled: { type: Boolean, required: true },
     nodeColor: { type: Function, required: true },
     nodePulseColor: { type: Function, required: true },
-    nodePulsable: { type: Function, required: true },
+    nodeIsPulse: { type: Function, required: true },
     nodeDeletable: { type: Function, required: true },
     beforeDeleteNode: { type: Function, required: true },
     beforeDeleteLink: { type: Function, required: true },

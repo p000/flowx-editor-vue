@@ -8,7 +8,7 @@
       :grid-snap="gridSnap"
       :zoom-enabled="zoomEnabled"
       :node-color="nodeColor"
-      :node-pulsable="nodePulsable"
+      :node-is-pulse="nodePulsable"
       :node-deletable="nodeDeletable"
       :node-pulse-color="nodePulseColor"
       :before-delete-node="beforeDeleteNode"
